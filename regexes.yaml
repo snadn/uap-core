@@ -351,6 +351,9 @@ user_agent_parsers:
   - regex: 'Mozilla.+Android.+(GSA)/(\d+)\.(\d+)\.(\d+)'
     family_replacement: 'Google'
 
+  # TBS
+  - regex: '(TBS)/(\d+)'
+
   # Chrome Mobile
   - regex: 'Version/.+(Chrome)/(\d+)\.(\d+)\.(\d+)\.(\d+)'
     family_replacement: 'Chrome Mobile WebView'
@@ -4869,6 +4872,10 @@ device_parsers:
   #   cannot determine specific device type from ua string. (3g, 3gs, 4, etc)
   ##########
   # @note: on some ua the device can be identified e.g. iPhone5,1
+  - regex: '\(iPhoneDevice; (.*?)\)'
+    device_replacement: '$1'
+    brand_replacement: 'Apple'
+    model_replacement: '$1'
   - regex: '(iPhone|iPad|iPod)(\d+,\d+)'
     device_replacement: '$1'
     brand_replacement: 'Apple'
@@ -5289,6 +5296,9 @@ device_parsers:
   #########
   # Android General Device Matching (far from perfect)
   #########
+  - regex: 'Android[\- ][\d.]+; (.+)(?: Build\/(.*?); wv\))'
+    brand_replacement: '$2'
+    model_replacement: '$1'
   - regex: 'Android[\- ][\d]+\.[\d]+; [A-Za-z]{2}\-[A-Za-z]{0,2}; WOWMobile (.+)( Build[/ ]|\))'
     brand_replacement: 'Generic_Android'
     model_replacement: '$1'

@@ -1,16 +1,23 @@
 test_cases:
 
+  - user_agent_string: Mozilla/5.0 (Linux; Android 9; LYA-AL00 Build/HUAWEILYA-AL00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 MQQBrowser/6.2 TBS/044807 Mobile Safari/537.36 MMWEBID/6990 MicroMessenger/7.0.6.1460(0x27000634) Process/tools NetType/4G Language/zh_CN
+
+    family: 'TBS'
+    major: '044807'
+    minor:
+    patch:
+
   - user_agent_string: 'atc/1.0 watchOS/5.1.3 model/Watch3,4 hwp/t8004 build/16S535 (6; dt:156)'
     family: 'Apple Watch App'
     major: '3'
     minor: '4'
-    patch: 
+    patch:
 
   - user_agent_string: 'atc/1.0 watchOS/5.2 model/Watch4,4 hwp/t8006 build/16T225 (6; dt:193)'
     family: 'Apple Watch App'
     major: '4'
     minor: '4'
-    patch: 
+    patch:
 
   - user_agent_string: 'Mozilla/5.0 (Windows; U; en-US) AppleWebKit/531.9 (KHTML, like Gecko) AdobeAIR/2.5.1'
     family: 'AdobeAIR'
